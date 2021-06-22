@@ -1,0 +1,102 @@
+#include <iostream>
+#include <math.h>
+#include <Windows.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(866); 
+	SetConsoleOutputCP(866);
+	int d, m;
+	cout << "Enter day: ";
+	cin >> d;
+	cout << "Enter month: ";
+	cin >> m;
+	switch (m) {
+	case(1):
+		if (d > 0 && d < 20) {
+			cout << "Козерог";
+			break;
+		}
+		cout << "Водолей";
+		break;
+	case(2):
+		if (d > 0 && d < 19) {
+			cout << "Водолей";
+			break;
+		}
+		cout << "Рыбы";
+		break;
+	case(3):
+		if (d > 0 && d < 21) {
+			cout << "Рыбы";
+			break;
+		}
+		cout << "Овен";
+		break;
+	case(4):
+		if (d > 0 && d < 20) {
+			cout << "Овен";
+			break;
+		}
+		cout << "Телец";
+		break;
+	case(5):
+		if (d > 0 && d < 21) {
+			cout << "Телец";
+			break;
+		}
+		cout << "Близнецы";
+		break;
+	case(6):
+		if (d > 0 && d < 22){
+			cout << "Телец";
+			break;
+		}
+		cout << "Рак";
+		break;
+	case(7):
+		if (d > 0 && d < 23) {
+			cout << "Рак";
+			break;
+		}
+		cout << "Лев";
+		break;
+	case(8):
+		if (d > 0 && d < 23) {
+			cout << "Лев";
+			break;
+		}
+		cout << "Дева";
+		break;
+	case(9):
+		if (d > 0 && d < 23) {
+			cout << "Дева";
+			break;
+		}
+		cout << "Весы";
+		break;
+	case(10):
+		if (d > 0 && d < 23) {
+			cout << "Весы";
+			break;
+		}
+		cout << "Скорпион";
+		break;
+	case(11):
+		if (d > 0 && d < 23) {
+			cout << "Скорпион";
+			break;
+		}
+		cout << "Стрелец";
+		break;
+	case(12):
+		if (d > 0 && d < 21) {
+			cout << "Стрелец";
+			break;
+		}
+		cout << "Козерог";
+		break;
+	}
+	return 0;
+}

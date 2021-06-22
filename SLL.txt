@@ -1,0 +1,180 @@
+#include "iostream"
+using namespace std;
+
+template <typename T>
+class SingleList {
+    class Node {
+    public:
+        T value;
+        Node *next;
+
+        Node(T elem = T(), Node *next = nullptr) {
+            this->value=elem;
+            this->next=next;
+        }
+    };
+
+    int size;
+    Node *head;
+
+public:
+    SingleList() {
+        size=0;
+        head= nullptr;
+    }
+
+    int length() {
+        return size;
+    }
+
+    void pushFront(T elem) {
+        if(head== nullptr)
+            head = new Node(elem);
+        else {
+            Node *temp = new Node(elem, head);
+            head = temp;
+        }
+        size++;
+    }
+
+    void popFront() {
+        if(size <= 0)
+            throw out_of_range("SLL is empty!");
+        else {
+            Node *temp = head->next;
+            delete head;
+            head=temp;
+            size--;
+        }
+    }
+
+    void clearAll() {
+        while(size!=0)
+            popFront();
+    }
+
+    void insertAt(int pos, T elem) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(head== nullptr) {
+                head = new Node(elem);
+            }
+            else if(pos==0) {
+                Node *cur = new Node(elem, head);
+                head = cur;
+            }
+            else if(pos==size-1) {
+                Node *cur = new Node(elem);
+                Node *temp = head;
+                while(temp->next!= nullptr) {
+                    temp=temp->next;
+                }
+                temp->next=cur;
+            }
+            else {
+                Node *cur = new Node(elem);
+                Node *temp = head;
+                Node *temp2;
+                int c = 0;
+                while (c < pos - 1) {
+                    temp = temp->next;
+                    c++;
+                }
+                temp2 = temp->next;
+                temp->next = cur;
+                cur->next = temp2;
+            }
+            size++;
+        }
+    }
+
+    void deleteAt(int pos) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(pos==0) {
+                Node *cur = head->next;
+                delete head;
+                head = cur;
+            }
+            else if(pos==size-1) {
+                int c=0;
+                Node *temp = head;
+                while(c!=size-2) {
+                    temp=temp->next;
+                    c++;
+                }
+                Node *temp2 = temp->next;
+                delete temp2;
+                temp->next= nullptr;
+            }
+            else {
+                Node *temp = head;
+                Node *temp2;
+                Node *cur;
+                int c = 0;
+                while (c < pos - 1) {
+                    temp = temp->next;
+                    c++;
+                }
+                cur = temp->next;
+                temp2 =cur->next;
+                delete cur;
+                temp->next=temp2;
+            }
+            size--;
+        }
+    }
+
+    void updateAt(int pos, T elem) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(pos==0) {
+                head->value = elem;
+            }
+            else {
+                Node *temp = head;
+                int c = 0;
+                while (c < pos) {
+                    temp = temp->next;
+                    c++;
+                }
+                temp->value=elem;
+            }
+        }
+    }
+
+    void display() {
+        Node *cur = head;
+        cout<<"SLL: [ ";
+        while(cur!= nullptr) {
+            cout<<cur->value<<" ";
+            cur=cur->next;
+        }
+        cout<<"]\nLength: "<<size<<"\n\n";
+    }
+};
+
+int main() {
+    SingleList<int> s;
+    s.pushFront(5);
+    s.pushFront(4);
+    s.pushFront(3);
+    s.pushFront(2);
+    s.pushFront(1);
+
+    //s.popFront();
+
+    s.insertAt(2,999);
+    s.display();
+
+    s.deleteAt(5);
+    s.display();
+
+    s.updateAt(2,666);
+    s.display();
+
+    return 0;
+}

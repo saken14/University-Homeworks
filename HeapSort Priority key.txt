@@ -1,0 +1,113 @@
+#include <iostream>
+using namespace std;
+
+class Heap{
+private:
+    int length;
+    int arr[100];
+    int heapsize;
+
+public:
+    void print() {
+        for(int i=0; i<length; i++)
+            cout<<arr[i]<<" ";
+        cout<<endl;
+    }
+
+    Heap(int *arr, int length) {
+        for(int i=0; i<length; i++)
+            this->arr[i] = arr[i];
+        this->length=length;
+        this->heapsize=length;
+    }
+
+    int Parent(int i) {
+        return (i-1)/2;
+    }
+    int Left(int i) {
+        return (i*2)+1;
+    }
+    int Right(int i) {
+        return (i*2)+2;
+    }
+
+    int FindMaxElem() {
+        if(length==0 || heapsize==0)
+            throw out_of_range("Error");
+
+        return arr[0];
+    }
+
+    int FindMaxElem2() {
+        if(length==0 || heapsize==0)
+            throw out_of_range("Error");
+
+        int maxElem = arr[0];
+        arr[0] = arr[length-1];
+        length--;
+        heapsize--;
+        MaxHeapify(0);
+
+        return maxElem;
+    }
+
+    void IncreaseKey(int key, int i) {
+        if(arr[i] > key) {
+            throw new exception("Key is smaller than arr[i]");
+        }
+        else {
+            arr[i] = key;
+            while (arr[Parent(i)] < arr[i] && i > 0) {
+                swap(arr[Parent(i)],arr[i]);
+                i = Parent(i);
+            }
+        }
+    }
+
+    void Insertion(int key) {
+        length++;
+        heapsize++;
+
+        arr[length-1] = INT32_MIN;
+        IncreaseKey(key, length-1);
+    }
+
+    void MaxHeapify(int i) {
+        int largest = i;
+        int left = Left(i);
+        int right = Right(i);
+
+        if(left<heapsize && arr[left] > arr[largest])
+            largest=left;
+        if(right<heapsize && arr[right] > arr[largest])
+            largest=right;
+        if(largest!=i) {
+            swap(arr[i], arr[largest]);
+            MaxHeapify(largest);
+        }
+    }
+
+    void BuildMaxHeap() {
+        for(int i=Parent(length-1); i>=0; i--)
+            MaxHeapify(i);
+    }
+
+    void HeapSort() {
+        BuildMaxHeap();
+        for(int i=0; i<length; i++) {
+            swap(arr[0], arr[heapsize-1]);
+            heapsize--;
+            MaxHeapify(0);
+        }
+    }
+};
+
+int main() {
+    int arr[10] = {16, 14, 10, 8, 7, 9, 3, 2, 4, 1};
+    Heap obj(arr, 10);
+   /* obj.HeapSort();*/
+    obj.IncreaseKey(15, 8);
+    obj.print();
+
+    return 0;
+}

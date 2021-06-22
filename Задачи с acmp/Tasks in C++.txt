@@ -1,0 +1,328 @@
+////////////////////////////////////Цветочки/////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	int K;
+	cin >> K;
+	K %= 3;
+	if (K == 0)
+		cout << "GCV";
+	else if (K == 1)
+		cout << "VGC";
+	else
+		cout << "CVG";
+
+	return 0;
+}
+
+
+//////////////////////////////////// Гадание /////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, c = 0;
+	cin >> n;
+	for (int i = 1; i < n+1; i++) {
+		if (n % i == 0)
+			c += i;
+	}
+	cout << c;
+	return 0;
+}
+
+
+
+//////////////////////////////////// Временной ключ /////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, m, arr[100] = {}, c = 0;
+	cin >> n;
+	m = n;
+	for (int i = 0; i < n; i++) {
+		arr[i] = m % 2;
+		m /= 2;
+		c++;
+		if (m == 0)
+			break;
+	}
+	for (int i = 0; i < c; i++) {
+		if (arr[i] == 1)
+			n++;
+	}
+	cout << n;
+
+	return 0;
+}
+
+
+
+//////////////////////////////////// Торговые сделки в Амбере/////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int number_system(int n, int p) {
+	int arr[100] = {}, m, c = 0, res = 0;
+	m = n;
+	for (int i = 0; i < n; i++) {
+		arr[i] = m % p;
+		m /= p;
+		c++;
+		if (m == 0)
+			break;
+	}
+	for (int i = 0; i < c; i++) {
+		res += arr[i];
+	}
+
+	return res;
+}
+
+int main() {
+	int n1, p1, n2, p2;
+	cin >> n1 >> p1 >> n2 >> p2;
+
+	int res1 = number_system(n1,p1);
+	int res2 = number_system(n2, p2);
+
+	if (res1 == res2)
+		cout << res1;
+	else
+		cout << 0;
+
+	return 0;
+}
+
+
+
+//////////////////////////////////// Эния/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, a, b;
+	cin >> n >> a >> b;
+	cout << n * a * b * 2;
+	return 0;
+}
+
+
+//////////////////////////////////// Карточки - 3/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	double x, r = 0;
+	cin >> x;
+
+	for (double i = 2; ; i++) {
+		r += 1 / i;
+		if (r > x) {
+			cout << i - 1 << " card(s)";
+			break;
+		}
+	}
+
+	return 0;
+}
+
+
+//////////////////////////////////// Три грибника/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+
+	cout << n / 6 + n / 8 + n / 4 << " " << n / 6 << " " << n / 6 + n / 8;
+
+	return 0;
+}
+
+
+//////////////////////////////////// Азартный Шрэк/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, arr[100] = {}, minr = 0, maxr = 0;
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+	
+	for (int i = 0; i < n-1; i++)//3 1 8 100	
+		for (int j = 0; j < n-1; j++)
+			if (arr[j] > arr[j + 1])
+				swap(arr[j], arr[j + 1]);
+
+	for (int i = 0; i < n; i++) {
+		if (i < n / 2)
+			minr += arr[i];
+		else
+			maxr += arr[i];
+	}
+	cout << maxr - minr;
+	return 0;
+}
+
+//////////////////////////////////// Выборы/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, arr[1001] = {}, r = 0;
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n-1; j++) // 4 2 1 3 7
+			if (arr[j] > arr[j + 1])
+				swap(arr[j], arr[j + 1]);
+	
+	for (int i = 0; i < n / 2 + 1; i++) {
+		if (arr[i] == 1 || arr[i] == 2)
+			r += arr[i];
+		else
+			r += arr[i] / 2 + 1;
+	}
+	cout << r;
+	return 0;
+}
+
+
+//////////////////////////////////// Монеты - 2/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	double n, w, d, p, s;
+	cin >> n >> w >> d >> p;
+
+	s = (((n - 1) * n) / 2) * w - p;
+	if (s == 0)
+		cout << n;
+	else
+		cout << s / d;
+	
+
+	return 0;
+}
+
+
+//////////////////////////////////// Четырехзначный палиндром/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+
+	if (n % 10 == n / 1000 && (n % 100) / 10 == (n / 100) % 10)
+		cout << "YES";
+	else
+		cout << "NO";
+
+	return 0;
+}
+
+
+//////////////////////////////////// Счастливый билет/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;// 3 8 5  9 1 6
+
+	if (n / 100000 + (n / 10000) % 10 + (n / 1000) % 10 == n % 10 + (n % 100) / 10 + (n % 1000) / 100)
+		cout << "YES";
+	else
+		cout << "NO";
+
+	return 0;
+}
+
+
+//////////////////////////////////// Клетки/////////////////////////////////////////
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+
+	if ((int(s[0]) + int(s[1])) % 2 == 0)
+		cout << "BLACK";
+	else
+		cout << "WHITE";
+
+	return 0;
+}
+
+
+//////////////////////////////////// Единицы/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, n2, c = 0;
+	cin >> n;
+	n2 = n;
+
+	for (int i = 0; i < n2; i++) {
+		if (n % 2 == 1)
+			c++;
+		n /= 2;
+		if (n == 0)
+			break;
+	}
+	cout << c;
+
+	return 0;
+}
+
+
+//////////////////////////////////// Миша и негатив/////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, m, c = 0;
+	char arr1[100][100] = {}, arr2[100][100] = {};
+	cin >> n >> m;
+
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> arr1[i][j];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> arr2[i][j];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			if (arr1[i][j] != arr2[i][j])
+				c++;
+	cout << n*m - c;
+
+	return 0;
+}
+
+
+

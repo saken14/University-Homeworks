@@ -1,0 +1,45 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	double a1, a2, b1, b2, c1, c2, D, x, y, q;
+	cin >> a1 >> b1 >> c1;
+	cin >> a2 >> b2 >> c2;
+	cout << a1 << "x + " << b1 << "y = " << c1 << endl;
+	cout << a2 << "x + " << b2 << "y = " << c2 << endl;
+	
+	if (b1 != b2) {
+		double tb1 = b1;
+		a1 *= b2;
+		b1 *= b2;
+		c1 *= b2;
+		a2 *= tb1;
+		b2 *= tb1;
+		c2 *= tb1;
+
+		double a, b, c;
+		a = a1 - a2;
+		b = b1 - b2;
+		c = c1 - c2;
+
+		x = c / a;
+		y = (c1 - a1 * x) / b1;
+
+		cout << "x = " << x << ", y = " << y << "  (" << x << ", " << y << ")" << endl;
+		return 0;
+	}
+	else {
+		double a, b, c;
+		a = a1 - a2;
+		b = b1 - b2;
+		c = c1 - c2;
+
+		x = c / a;
+		y = (c1 - a1 * x) / b1;
+
+		cout << "x = " << x << ", y = " << y << "  (" << x << ", " << y << ")" << endl;
+		return 0;
+	}
+}

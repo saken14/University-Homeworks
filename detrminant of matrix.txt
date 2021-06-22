@@ -1,0 +1,212 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+class Matrix {
+public:
+	Matrix(int n, double **mat1, double **mat2) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				mat1[i][j] = 0;
+				mat2[i][j] = 0;
+			}
+		}
+	}
+	void setMatrix(int n, double **mat) {
+		for (int i = 0; i < n; i++) {
+			cout << "\t";
+			for (int j = 0; j < n; j++)
+				cin >> mat[i][j];
+		}
+	}
+	void getMatrix(int n, double **mat1, double **mat2) {
+		cout << "\tYour matrices are: " << endl;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat1[i][j];
+
+			if (i == 0)
+				cout << " and";
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat2[i][j];
+
+			cout << endl;
+		}
+		cout << endl << endl;
+	}
+
+	void plusMatrix(int n, double** mat1, double** mat2) {
+		double** resultMatrix = new double* [n];
+		for (int i = 0; i < n; i++)
+			resultMatrix[i] = new double[n];
+
+		for (int i = 0; i < n; i++)
+			for (int j = 0; j < n; j++)
+				resultMatrix[i][j] = mat1[i][j] + mat2[i][j];
+
+		cout << "The addition of matrix: " << endl;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				cout << "\t" << mat1[i][j];
+			}
+			if (i == n / 2)
+				cout << "   +";
+			for (int j = 0; j < n; j++) {
+				cout << "\t" << mat2[i][j];
+			}
+			if (i == n / 2)
+				cout << "   =";
+			for (int j = 0; j < n; j++) {
+				cout << "\t" << resultMatrix[i][j];
+			}
+			cout << endl;
+		}
+		cout << endl;
+		for (int i = 0; i < n; i++)
+			delete[] resultMatrix[i];
+		delete[] resultMatrix;
+	}
+	void minusMatrix(int n, double** mat1, double** mat2) {
+		double** resultMatrix = new double* [n];
+		for (int i = 0; i < n; i++)
+			resultMatrix[i] = new double[n];
+
+		for (int i = 0; i < n; i++)
+			for (int j = 0; j < n; j++)
+				resultMatrix[i][j] = mat1[i][j] - mat2[i][j];
+
+		cout << "The substruction of matrix: " << endl;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat1[i][j];
+
+			if (i == n / 2)
+				cout << "   -";
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat2[i][j];
+
+			if (i == n / 2)
+				cout << "   =";
+			for (int j = 0; j < n; j++)
+				cout << "\t" << resultMatrix[i][j];
+
+			cout << endl;
+		}
+		cout << endl;
+		for (int i = 0; i < n; i++)
+			delete[] resultMatrix[i];
+		delete[] resultMatrix;
+	}
+
+	void multiplyMatrix(int n, double** mat1, double** mat2) {
+		double** resultMatrix = new double* [n];
+		for (int i = 0; i < n; i++)
+			resultMatrix[i] = new double[n];
+
+		int t = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				for (int k = 0; k < n; k++)
+					t += mat1[i][k] * mat2[k][j];
+
+				resultMatrix[i][j] = t;
+				t = 0;
+			}
+		}
+		cout << "The product of matrix: " << endl;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat1[i][j];
+
+			if (i == n / 2)
+				cout << "   *";
+			for (int j = 0; j < n; j++)
+				cout << "\t" << mat2[i][j];
+
+			if (i == n / 2)
+				cout << "   =";
+			for (int j = 0; j < n; j++)
+				cout << "\t" << resultMatrix[i][j];
+
+			cout << endl;
+		}
+		cout << endl;
+		for (int i = 0; i < n; i++)
+			delete[] resultMatrix[i];
+		delete[] resultMatrix;
+	}
+	double detMatrix(int n, double **mat) {
+		int a, b;
+		double res = 0;
+		double** temp = new double* [n - 1];
+		for (int i = 0; i < n - 1; i++)
+			temp[i] = new double[n - 1];
+
+		if (n == 1)
+			return mat[0][0];
+		if (n == 2)
+			return (mat[0][0] * mat[1][1] - mat[0][1] * mat[1][0]);
+
+		else if (n >= 3) {
+			for (int i = 0; i < n; i++) {
+				a = 0;
+				for (int j = 1; j < n; j++) {
+					b = 0;
+					for (int k = 0; k < n; k++) {
+						if (k != i) {
+							temp[a][b] = mat[j][k];
+							b++;
+						}
+					}
+					a++;
+				}
+				res += mat[0][i] * pow(-1, (double)i+2) * detMatrix(n - 1, temp);
+			}
+		}
+		for (int i = 0; i < n-1; i++)
+			delete[] temp[i];
+		delete[] temp;
+		return res;
+	}
+};
+
+int main() {
+	int n;
+	cout << "Enter the size of matrix (N*N): ";
+	cin >> n;
+
+	double** mat1 = new double* [n];
+	double** mat2 = new double* [n];
+	for (int i = 0; i < n; i++) {
+		mat1[i] = new double[n];
+		mat2[i] = new double[n];
+	}
+
+	Matrix obj(n, mat1, mat2);
+
+	cout << "Enter your 1st matrix: " << endl;
+	obj.setMatrix(n, mat1);
+
+	cout << "Enter your 2nd matrix: " << endl;
+	obj.setMatrix(n, mat2);
+
+	obj.getMatrix(n, mat1, mat2);
+
+	obj.plusMatrix(n, mat1, mat2);
+	obj.minusMatrix(n, mat1, mat2);
+	obj.multiplyMatrix(n, mat1, mat2);
+
+	cout << "Determinant of 1st matrix: " << obj.detMatrix(n, mat1) << endl;
+	cout << "Determinant of 2nd matrix: " << obj.detMatrix(n, mat2) << endl;
+
+
+
+	for (int i = 0; i < n; i++) {
+		delete[] mat1[i];
+		delete[] mat2[i];
+	}
+	delete[] mat1;
+	delete[] mat2;
+
+	return 0;
+}

@@ -1,0 +1,443 @@
+////////////////////////////////////Цветочки/////////////////////////////////////////
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int K = int.Parse(Console.ReadLine());
+			K %= 3;
+			if (K == 0)
+				Console.WriteLine("GCV");
+			else if (K == 1)
+				Console.WriteLine("VGC");
+			else
+				Console.WriteLine("CVG");
+
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Гадание /////////////////////////////////////////
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n= int.Parse(Console.ReadLine()), c = 0;
+			for (int i = 1; i < n + 1; i++)
+			{
+				if (n % i == 0)
+					c += i;
+			}
+			Console.Write(c);
+		}
+    }
+}
+
+
+
+
+//////////////////////////////////// Временной ключ /////////////////////////////////////////
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n = int.Parse(Console.ReadLine()), m, c = 0;
+			int[] arr = new int[100];
+			m = n;
+			for (int i = 0; i < n; i++)
+			{
+				arr[i] = m % 2;
+				m /= 2;
+				c++;
+				if (m == 0)
+					break;
+			}
+			for (int i = 0; i < c; i++)
+			{
+				if (arr[i] == 1)
+					n++;
+			}
+			Console.Write(n);
+		}
+    }
+}
+
+
+
+
+//////////////////////////////////// Торговые сделки в Амбере/////////////////////////////////////////
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    {
+
+		static int number_system(int n, int p)
+		{
+			int m, c = 0, res = 0;
+			int[] arr = new int[100];
+			m = n;
+			for (int i = 0; i < n; i++)
+			{
+				arr[i] = m % p;
+				m /= p;
+				c++;
+				if (m == 0)
+					break;
+			}
+			for (int i = 0; i < c; i++)
+			{
+				res += arr[i];
+			}
+
+			return res;
+		}
+		static void Main(string[] args)
+        {
+			int n1 = int.Parse(Console.ReadLine()), 
+				p1 = int.Parse(Console.ReadLine()), 
+				n2 = int.Parse(Console.ReadLine()), 
+				p2 = int.Parse(Console.ReadLine());
+
+			int res1 = number_system(n1, p1);
+			int res2 = number_system(n2, p2);
+
+			if (res1 == res2)
+				Console.Write(res1);
+			else
+				Console.Write(0);
+		}
+    }
+}
+
+
+
+
+//////////////////////////////////// Эния/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+            int n=int.Parse(Console.ReadLine()), 
+                a = int.Parse(Console.ReadLine()), 
+                b = int.Parse(Console.ReadLine());
+            Console.Write(n * a * b * 2);
+        }
+    }
+}
+
+
+
+//////////////////////////////////// Карточки - 3/////////////////////////////////////////
+
+using System;
+using System.Globalization;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			NumberFormatInfo NumberFormatInfo = new NumberFormatInfo()
+			{
+				NumberDecimalSeparator = ".",
+			};
+			double x =double.Parse(Console.ReadLine(), NumberFormatInfo), r = 0;
+			
+
+			for (double i = 2; ; i++)
+			{
+				r += 1 / i;
+				if (r > x)
+				{
+					Console.Write(i - 1 + " card(s)");
+					break;
+				}
+			}
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Три грибника/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            Console.Write(n / 6 + n / 8 + n / 4 + " " + n / 6 + " " + (n / 6 + n / 8));
+        }
+    }
+}
+
+
+
+//////////////////////////////////// Азартный Шрэк/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n = int.Parse(Console.ReadLine()), minr = 0, maxr = 0, t;
+			int[] arr = new int[100];
+
+			for (int i = 0; i < n; i++)
+				arr[i] = int.Parse(Console.ReadLine());
+
+			for (int i = 0; i < n - 1; i++)
+			{
+				for (int j = 0; j < n - 1; j++)
+				{
+					if (arr[j] > arr[j + 1])
+					{
+						t = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = t;
+					}
+				}
+			}
+
+			for (int i = 0; i < n; i++)
+			{
+				if (i < n / 2)
+					minr += arr[i];
+				else
+					maxr += arr[i];
+			}
+			Console.Write(maxr - minr);
+		}
+    }
+}
+
+
+//////////////////////////////////// Выборы/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n=int.Parse(Console.ReadLine()), r = 0, t;
+			int[] arr = new int[1001];
+
+			for (int i = 0; i < n; i++)
+				arr[i] = int.Parse(Console.ReadLine());
+
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < n - 1; j++)
+				{
+					if (arr[j] > arr[j + 1])
+					{
+						t = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = t;
+					}
+				}
+			}
+
+			for (int i = 0; i < n / 2 + 1; i++)
+			{
+				if (arr[i] == 1 || arr[i] == 2)
+					r += arr[i];
+				else
+					r += arr[i] / 2 + 1;
+			}
+			Console.Write(r);
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Монеты - 2/////////////////////////////////////////
+
+using System;
+using System.Globalization;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
+			{
+				NumberDecimalSeparator = ".",
+			};
+			double n =double.Parse(Console.ReadLine()), 
+				w = double.Parse(Console.ReadLine()), 
+				d = double.Parse(Console.ReadLine()), 
+				p = double.Parse(Console.ReadLine()), s;
+
+			s = (((n - 1) * n) / 2) * w - p;
+			if (s == 0)
+				Console.Write(n);
+			else
+				Console.Write(s / d);
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Четырехзначный палиндром/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n = int.Parse(Console.ReadLine());
+
+			if (n % 10 == n / 1000 && (n % 100) / 10 == (n / 100) % 10)
+				Console.Write("YES");
+			else
+				Console.Write("NO");
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Счастливый билет/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n = int.Parse(Console.ReadLine());
+
+			if (n / 100000 + (n / 10000) % 10 + (n / 1000) % 10 == n % 10 + (n % 100) / 10 + (n % 1000) / 100)
+				Console.Write("YES");
+			else
+				Console.Write("NO");
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Клетки/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			string s = Console.ReadLine();
+
+			if ((s[0] + s[1]) % 2 == 0)
+				Console.Write("BLACK");
+			else
+				Console.Write("WHITE");
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Единицы/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n = int.Parse(Console.ReadLine()), n2, c = 0;
+			n2 = n;
+
+			for (int i = 0; i < n2; i++)
+			{
+				if (n % 2 == 1)
+					c++;
+				n /= 2;
+				if (n == 0)
+					break;
+			}
+			Console.Write(c);
+		}
+    }
+}
+
+
+
+//////////////////////////////////// Миша и негатив/////////////////////////////////////////
+
+using System;
+
+namespace УчебнаяПрактикаСSharp
+{
+    class Program
+    { 
+        static void Main(string[] args)
+        {
+			int n=int.Parse(Console.ReadLine()), m = int.Parse(Console.ReadLine()), c = 0;
+			char[,] arr1 = new char[100, 100];
+			char[,] arr2 = new char[100, 100];
+
+			for (int i = 0; i < n; i++)
+				for (int j = 0; j < m; j++)
+					arr1[i, j] = Console.ReadKey().KeyChar;
+			for (int i = 0; i < n; i++)
+				for (int j = 0; j < m; j++)
+					arr2[i, j] = Console.ReadKey().KeyChar;
+			for (int i = 0; i<n; i++)
+				for (int j = 0; j<m; j++)
+					if (arr1[i,j] != arr2[i,j])
+						c++;
+			Console.Write(n * m - c);
+		}
+    }
+}
+
+
+
+

@@ -1,0 +1,124 @@
+#include<iostream>
+#include<string>
+#include <cmath>
+#include <math.h>
+using namespace std;
+
+class Cipher {
+public:
+    string text;
+
+    string encrypt(int key) {
+        int len=text.length(), n = ceil((double)len/key), x=0;
+        char a[key][n];
+
+        for (int i=0; i<key; i++){
+            for (int j=0; j<n; j++){
+                a[i][j] = text[x];
+                x++;
+                if (x > len){
+                    for (int q=i; q<key; q++){
+                        for (int w = j; w<n; w++){
+                            a[q][w] = ' ';
+                        }
+                    }
+                }
+            }
+        }
+        cout <<endl<<endl;
+
+        x=0;
+        string s="                                                                                                      ";
+        for (int i=0; i<n; i++){
+            for (int j=0; j<key; j++){
+                s[x] = a[j][i];
+                x++;
+            }
+        }
+        s[x]='}';
+        return s;
+    }
+
+
+    string decrypt(int key) {
+        int len=text.length(), n = ceil((double)len/key), x=0;
+        char a[n][key];
+
+        for (int i=0; i<n; i++){
+            for (int j=0; j<key; j++){
+                a[i][j] = text[x];
+                x++;
+                if (x > len){
+                    for (int q=i; q<n; q++){
+                        for (int w = j; w<key; w++){
+                            a[q][w] = ' ';
+                        }
+                    }
+                }
+            }
+        }
+        cout <<endl<<endl;
+
+        x=0;
+        string s="                                                                                                      ";
+        for (int i=0; i<key; i++){
+            for (int j=0; j<n; j++){
+                s[x] = a[j][i];
+                x++;
+            }
+        }
+        s[x]='}';
+        return s;
+    }
+};
+
+int main() {
+    Cipher c;
+    int key, dir;
+    c.text = "Lorem ipsum sit amet dolor";
+    cout <<"Enter the purpose (0 - encrypt) (1 - decrypt):  ";
+    cin>>dir;
+    cout <<endl<<endl;
+
+    if (dir == 0){
+        cout <<"Enter the KEY of encrypt (1 < KEY < "<<c.text.length()<<"):  ";
+        cin >> key;
+        if (key>=26 || key<=1){
+            cout <<endl<<"The entered KEY isn't correct! Please, keep the rule (1 < KEY < "<<c.text.length()<<")!  "<<endl<<endl;
+            cout <<"Enter the KEY of encrypt (1 < KEY < "<<c.text.length()<<"):  ";
+            cin>>key;
+            if (key>=26 || key<=1){
+                cout<<endl<<"ERROR!"<<endl<<endl;
+                cout <<"All copyrights reserved.  Made by Saken."<<endl<<endl;
+                return 0;
+            }
+        }
+        cout <<"The encrypted text: -->  "<<"{"<< c.encrypt(key)<< endl<<endl;
+        cout <<"All copyrights reserved.  Made by Saken."<<endl<<endl;
+    return 0;
+    }
+
+    if (dir == 1){
+        cout <<"Enter the KEY of decrypt (1 < KEY < "<<c.text.length()<<"):  ";
+        cin >> key;
+        if (key>=26 || key<=1){
+            cout <<endl<<"The entered KEY isn't correct! Please, keep the rule (1 < KEY < "<<c.text.length()<<")!  "<<endl<<endl;
+            cout <<"Enter the KEY of decrypt (1 < KEY < "<<c.text.length()<<"):  ";
+            cin>>key;
+            if (key>=26 || key<=1){
+                cout<<endl<<"ERROR!"<<endl<<endl;
+                cout <<"All copyrights reserved.  Made by Saken."<<endl<<endl;
+                return 0;
+            }
+        }
+        cout <<"The decrypted text: -->  "<<"{"<< c.decrypt(key) << endl<<endl;
+    }
+    if (dir != 0 && dir != 1){
+        cout <<"ERROR!"<<endl<<endl;
+        cout <<"All copyrights reserved.  Made by Saken."<<endl<<endl;
+        return 0;
+    }
+
+    cout <<"All copyrights reserved.  Made by Saken."<<endl<<endl;
+    return 0;
+}

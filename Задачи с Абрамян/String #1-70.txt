@@ -1,0 +1,2330 @@
+///////////////////////////////////////////////////////ALL TASKS FROM ABRAMYAN///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////ALL COPYRIGHTS RESERVED///////////
+///////MADE BY SAKEN/////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////AGAI, I HAVE DONE NOT ONLY EVEN TASKS, HAVE DONE "ALL THE 70 TASKS"!!! I HOPE, YOU WILL RATE ME :D. I TRIED SO HARD!!! SO, I'M SO PROUD OF THIS! ;)  ///////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////1 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    char c;
+    cin>>c;
+    cout <<(int)c;
+
+    return 0;
+}
+
+
+/////////////////////////////////////2 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    cout <<(char)n;
+
+    return 0;
+}
+
+
+/////////////////////////////////////3 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    char c;
+    cin>>c;
+    cout <<(int)c-1<<" "<<(int)c+1;
+
+    return 0;
+}
+
+
+/////////////////////////////////////4 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    cout <<(char)(n+65);
+
+    return 0;
+}
+
+
+/////////////////////////////////////5 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    for (int i=122; i>122-n; i--)
+        cout <<(char)i<<" ";
+
+    return 0;
+}
+
+/////////////////////////////////////6 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int c;
+    cin>>c;
+    if (c>=48 && c<=57){
+        cout<<"digit";
+        return 0;
+    }
+    if(c>=65 && c<=90 || c>=97 && c<=122){
+        cout <<"lat";
+        return 0;
+    }
+    if (c>=128 && c<=175 || c>=224 && c<=243){
+        cout <<"rus";
+        return 0;
+    }
+    else
+        cout <<"invalid number";
+
+    return 0;
+}
+
+
+/////////////////////////////////////7 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    cout <<(int)s[0]<<" "<<(int)s[s.length()-1];
+    return 0;
+}
+
+
+/////////////////////////////////////8 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    char c;
+    cin>>n>>c;
+    for (int i=0; i<n; i++)
+        cout <<c;
+    return 0;
+}
+
+
+/////////////////////////////////////9 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    char c,d;
+    cin>>n>>c>>d;
+    for (int i=0; i<n; i++)
+        cout <<c<<d;
+    return 0;
+}
+
+/////////////////////////////////////10 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    for (int i=s.length()-1; i>=0; i--)
+        cout <<s[i];
+    return 0;
+}
+
+
+/////////////////////////////////////11 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    for (int i=0; i<s.length(); i++)
+        cout <<s[i]<<" ";
+    return 0;
+}
+
+
+/////////////////////////////////////12 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int n;
+    cin>>n;
+    for (int i=0; i<s.length(); i++){
+    for (int j=1; j<n; j++){
+        cout <<"*";
+    }
+    cout <<s[i];
+    }
+    return 0;
+}
+
+
+/////////////////////////////////////13 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int n=0;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=48 && (int)s[i]<=57)
+        n++;
+    }
+    cout <<n;
+    return 0;
+}
+
+
+/////////////////////////////////////14 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int n=0;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=97 && (int)s[i]<=122)
+        n++;
+    }
+    cout <<n;
+    return 0;
+}
+
+/////////////////////////////////////15 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int n=0;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=65 && (int)s[i]<=90 || (int)s[i]>=128 && (int)s[i]<=175 || (int)s[i]>=224 && (int)s[i]<=243)
+        n++;
+    }
+    cout <<n;
+    return 0;
+}
+
+
+/////////////////////////////////////16 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=97 && (int)s[i]<=122){
+        cout <<(char)((int)s[i]-32);
+        continue;
+        }
+        cout <<s[i];
+    }
+    return 0;
+}
+
+
+/////////////////////////////////////17 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=65 && (int)s[i]<=90){
+        cout <<(char)((int)s[i]+32);
+        continue;
+        }
+        cout <<s[i];
+    }
+    return 0;
+}
+
+
+/////////////////////////////////////18 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    for (int i=0; i<s.length(); i++){
+        if ((int)s[i]>=97 && (int)s[i]<=122){
+        cout <<(char)((int)s[i]-32);
+        continue;
+        }
+        if ((int)s[i]>=65 && (int)s[i]<=90){
+        cout <<(char)((int)s[i]+32);
+        continue;
+        }
+        cout <<s[i];
+    }
+    return 0;
+}
+
+
+/////////////////////////////////////19 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=0,y=0;
+
+    for (int i=0; i<len; i++){
+        if (s[i] =='.'){
+            cout <<"2";
+            return 2;
+        }
+    }
+
+    for (int i=0; i<len; i++){
+        if ((int)s[i] >= 48 && (int)s[i]<=57){
+            cout <<"1";
+            return 1;
+        }
+    }
+
+    cout <<"0";
+return 0;
+}
+
+
+
+/////////////////////////////////////20 ESEP///////////////////////////////////////
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), n;
+
+    for (int i=0; i<len; i++){
+        n = n*0 + (int)s[i]-48;
+        cout <<(char)(n+33);
+        n=0;
+    }
+return 0;
+}
+
+
+/////////////////////////////////////21 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=0,y=0;
+
+    for (int i=len-1; i>=0; i--){
+        cout <<(char)(s[i+33]);
+    }
+return 0;
+}
+
+
+
+/////////////////////////////////////22 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;	
+    getline(cin, s);
+    int len = s.length(), x=0;
+
+    for (int i=0; i<len; i++){
+        x+=(int)s[i]-48;
+    }
+    cout <<x;
+return 0;
+}
+
+
+
+/////////////////////////////////////23 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=s[0];
+
+    for (int i=0; i<len-1; i++){
+        if (s[i] == '+'){
+            x+=(int)s[i+1]-48;
+        }
+        if (s[i] == '-'){
+            x-=(int)s[i+1]-48;
+        }
+    }
+    cout <<(int)x-48;
+return 0;
+}
+
+
+
+/////////////////////////////////////24 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=0;
+
+    for (int i=len-1; i>=0; i--){
+        if (s[i] == '0')
+            continue;
+        else {
+            x+=pow(2, len-i+1);
+        }
+    }
+    cout <<x/4;
+return 0;
+}
+
+
+
+/////////////////////////////////////25 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=0, n, f[] = {0};
+
+    for (int i=0; i<len; i++)
+        x = x*10 + (int)s[i]-48;
+
+    bool w=false;
+    for (int i=x; i>=0; i--){
+        for (int j=0; j<10; j++){
+            if (i == pow(2, j)){
+                n=j+1;
+                w=true;
+                break;
+            }
+        }
+        if (w)
+        break;
+    }
+
+    for (int i=0; i<n; i++){
+        f[i]=x%2;
+        x/=2;
+    }
+
+    for (int i=n-1; i>=0; i--)
+        cout <<f[i];
+
+return 0;
+}
+
+
+
+/////////////////////////////////////26 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int len = s.length();
+
+    if (len>n){
+        s.erase(0, len-n);
+        cout <<s;
+        return 0;
+    }
+    bool w = false;
+    if (len < n){
+        w=true;
+        for (int i=0; i<n-len; i++)
+            cout <<".";
+    }
+    if (w)
+    cout <<s;
+    if (len == n)
+        cout <<s;
+
+return 0;
+}
+
+
+
+/////////////////////////////////////27 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    int n, m;
+    cin>>n>>m;
+    string s, f;
+    cin>>s>>f;
+    int lens = s.length(), lenf = f.length(), x;
+
+    for (int i=0; i<n; i++){
+        cout<<s[i];
+        x=i;
+    }
+    for (int i=lenf-m; i<lenf; i++)
+        cout <<f[i];
+
+return 0;
+}
+
+
+
+/////////////////////////////////////28 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    char c;
+    cin>>c;
+    string s;
+    cin>>s;
+    int len = s.length(), x=0;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == c){
+            cout <<c<<c;
+            continue;
+        }
+        cout <<s[i];
+    }
+
+return 0;
+}
+
+
+
+/////////////////////////////////////29 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    char c;
+    cin>>c;
+    string s, s0;
+    cin>>s>>s0;
+    int len = s.length(), x=0;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == c)
+            cout <<s0;
+        cout <<s[i];
+    }
+
+return 0;
+}
+
+
+
+/////////////////////////////////////30 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    char c;
+    cin>>c;
+    string s, s0;
+    cin>>s>>s0;
+    int len = s.length(), x=0;
+
+    for (int i=0; i<len; i++){
+        cout <<s[i];
+        if (s[i] == c)
+            cout <<s0;
+    }
+
+return 0;
+}
+
+
+
+/////////////////////////////////////31 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s0;
+    cin>>s>>s0;
+    int len = s.length(), x, len0 = s0.length();
+
+    for (int i=0; i<len0; i++){
+        for (int j=0; j<len; j++){
+            if (s0[i] == s[j]){
+                    int y=j;
+                for (int k=i; k<len0; k++){
+                    if (s0[k] != s[y]){
+                        cout <<"FALSE";
+                        return 0;
+                    }
+                    y++;
+                }
+            }
+        }
+    }
+    cout <<"TRUE";
+
+return 0;
+}
+
+
+
+/////////////////////////////////////32 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s0;
+    cin>>s>>s0;
+    int len = s.length(), x, len0 = s0.length(), counter=0;
+
+        for (int j=0; j<len; j++){
+            if (s0[0] == s[j]){
+                    int y=j;
+                for (int k=0; k<len0; k++){
+                    if (s0[k] == s[y]){
+                        counter++;
+                    }
+                    y++;
+                }
+            }
+        }
+    cout <<counter/len0;
+
+
+return 0;
+}
+
+
+
+/////////////////////////////////////33 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s0;
+    cin>>s>>s0;
+    int x, len0 = s0.length();
+
+    x = s.find(s0);
+    if (x>0)
+    s.erase(x, len0);
+    
+    cout <<s;
+
+
+return 0;
+}
+
+
+
+/////////////////////////////////////34 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s0;
+    cin>>s>>s0;
+    int x, len0 = s0.length();
+
+    x = s.rfind(s0);
+    if (x>=0)
+    s.erase(x, len0);
+    
+    cout <<s;
+
+
+return 0;
+}
+
+/////////////////////////////////////35 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s0;
+    cin>>s>>s0;
+    int len = s.length(), x, len0 = s0.length(), counter=0;
+
+    for (int j=0; j<len; j++){
+            if (s0[0] == s[j]){
+                    int y=j;
+                for (int k=0; k<len0; k++){
+                    if (s0[k] == s[y]){
+                        counter++;
+                    }
+                    y++;
+                }
+            }
+        }
+    int e= counter/len0;
+
+    for (int i=0; i<e; i++){
+        x = s.find(s0);
+        if(x>=0)
+        s.erase(x, len0);
+    }
+    cout <<s;
+
+
+return 0;
+}
+
+
+
+/////////////////////////////////////36 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s1, s2;
+    cin>>s>>s1>>s2;
+    int len = s.length(), x, len1 = s1.length(), counter=0, len2 = s2.length();
+
+    x=s.find(s1);
+    s.erase(x, len1);
+    s.insert(x, s2);
+
+    cout <<s;
+return 0;
+}
+
+
+
+/////////////////////////////////////37 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s1, s2;
+    cin>>s>>s1>>s2;
+    int len = s.length(), x, len1 = s1.length(), counter=0, len2 = s2.length();
+
+    x=s.rfind(s1);
+    s.erase(x, len1);
+    s.insert(x, s2);
+
+    cout <<s;
+return 0;
+}
+
+
+
+/////////////////////////////////////38 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s1, s2;
+    cin>>s>>s1>>s2;
+    int len = s.length(), x, len1 = s1.length(), counter=0, len2 = s2.length();
+
+    for (int j=0; j<len; j++){
+            if (s1[0] == s[j]){
+                    int y=j;
+                for (int k=0; k<len1; k++){
+                    if (s1[k] == s[y]){
+                        counter++;
+                    }
+                    y++;
+                }
+            }
+        }
+    int e = counter/len1;
+
+    for (int i=0; i<e; i++){
+        x=s.find(s1);
+        s.erase(x, len1);
+        s.insert(x, s2);
+    }
+
+    cout <<s;
+return 0;
+}
+
+
+
+/////////////////////////////////////39 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x, y, z;
+
+    x = s.find(' ');
+    z = s.find(' ', x+1);
+    for (int i=x+1; i<z; i++)
+        cout <<s[i];
+
+return 0;
+}
+
+
+
+/////////////////////////////////////40 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), x, y, z;
+
+    x = s.find(' ');
+    z = s.rfind(' ');
+    for (int i=x+1; i<z; i++)
+        cout <<s[i];
+
+
+return 0;
+}
+
+/////////////////////////////////////41 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <Windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Ru");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(),x=1;
+
+    for (int i=0; i<len-1; i++){
+        if (s[i] == ' ' && s[i+1] != ' ')
+            x++;
+    }
+    cout <<x;
+return 0;
+}
+
+
+/////////////////////////////////////42 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    char c;
+    int len = s.length(), counter=0,x,n=0,a;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' '){
+            if (s[n] == s[i-1]){
+                counter++;
+                n=i+1;
+            }
+        }
+    }
+    if (s[n] == s[len-1])
+        counter++;
+
+    cout <<counter;
+return 0;
+}
+
+
+/////////////////////////////////////43 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    char c;
+    int len = s.length(), counter=0,x,n=0,a;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' '){
+            for (int j=i-1; j>=n; j--){
+                if (s[j] == '¿'){
+                    counter++;
+                    break;
+                }
+            }
+        n=i;
+        }
+
+}
+    n = s.rfind(' ');
+    for (int i=n; i<len; i++){
+        if (s[i] == '¿')
+             counter++;
+    }
+    cout<<counter;
+return 0;
+}
+
+
+/////////////////////////////////////44 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    char c;
+    int len = s.length(), counter=0,x,n=0,a, counter2=0;
+
+    bool w=false;
+    for (int i=0; i<len; i++){
+        if (s[i] == ' '){
+            for (int j=i-1; j>=n; j--){
+                if (s[j] == '¿')
+                    counter++;
+                if (counter == 3){
+                    counter2++;
+                    break;
+                }
+            }
+                counter=0;
+        n=i+1;
+        }
+}
+    counter=0;
+    n = s.rfind(' ');
+    for (int i=n+1; i<len; i++){
+        if (s[i] == '¿')
+             counter++;
+        if (counter==3){
+            counter2++;
+            break;
+        }
+    }
+    cout<<counter2;
+return 0;
+}
+
+
+/////////////////////////////////////45 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    char c;
+    int len = s.length(), counter=0,x=0,n=0, q=0,p=0, min, u;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' ')
+            counter++;
+    }
+    counter++;
+    int a[counter];
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' '){
+            x=i-p;
+            a[q]=x;
+            q++;
+            p=i+1;
+        }
+}
+    u = s.rfind(' ');
+    a[counter-1]=len-u-1;
+    min=a[0];
+    for (int i=0; i<sizeof(a)/4; i++){
+        if (min>a[i])
+            min=a[i];
+    }
+    cout <<min;
+
+return 0;
+}
+
+
+/////////////////////////////////////46 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    char c;
+    int len = s.length(), counter=0,x=0,n=0, q=0,p=0, max, u;
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' ')
+            counter++;
+    }
+    counter++;
+    int a[counter];
+
+    for (int i=0; i<len; i++){
+        if (s[i] == ' '){
+            x=i-p;
+            a[q]=x;
+            q++;
+            p=i+1;
+        }
+}
+    u = s.rfind(' ');
+    a[counter-1]=len-u-1;
+    max=a[0];
+    for (int i=0; i<sizeof(a)/4; i++){
+        if (max<a[i])
+            max=a[i];
+    }
+    cout <<max;
+
+return 0;
+}
+
+
+/////////////////////////////////////47 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+
+    for (int i=0; i<len; i++){
+        if (s[i]==' ')
+        continue;
+        cout <<"."<<s[i];
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////48 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+    char c=s[0];
+    cout <<s[0];
+    for (int i=1; i<len; i++){
+        if (s[i] == c){
+            cout <<".";
+            continue;
+        }
+        cout <<s[i];
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////49 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+    char c=s[len-1];
+    for (int i=0; i<len-1; i++){
+        if (s[i] == c){
+            cout <<".";
+            continue;
+        }
+        cout <<s[i];
+    }
+    cout <<s[len-1];
+
+return 0;
+}
+
+
+/////////////////////////////////////50 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+    for (int i=len-1; i>=0; i--){
+        if (s[i]==' ')
+            continue;
+        cout <<" "<<s[i];
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////51 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main () {
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1;
+    getline(cin, s1);
+    int lens1 = s1.length(), len = s.length();
+
+////////////////////////////////////////////////////////INPUT;    — ¿   ≈ Õ – ¿ ” ¿ Õ
+
+///////////////////////////////////////////////////////OUTOUT:    ¿ ¿ ¿ ≈   Õ Õ – — ”
+
+    for(int i=0; i<len; i++){
+        for(int j=0; j<lens1; j++){
+            if(s1[j]==' '){
+                continue;
+            }
+            if(s[i] == s1[j]){
+                cout<<s1[j]<<" ";
+            }
+        }
+    }
+
+
+return 0;
+}
+
+/////////////////////////////////////52 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+
+    if (s[0]<='z' && s[0]>='A' && s[0]<='z' && s[0]>='a'){
+        cout<<(char)((int)s[0]-32);
+    }
+    else
+        cout<<s[0];
+
+    for (int i=1; i<len; i++){
+        if (s[i]<='z' && s[i]>='A' && s[i-1]==' '){
+            cout <<(char)((int)s[i]-32);
+            continue;
+        }
+        cout<<s[i];
+    }
+return 0;
+}
+
+
+/////////////////////////////////////53 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n=0;
+
+    for(int i=0; i<len; i++){
+        if(s[i]=='!' || s[i]=='%' || s[i]=='^' || s[i]=='&' || s[i]=='*' || s[i]=='(' || s[i]==')' ||
+           s[i]=='+' || s[i]=='=' || s[i]=='-' || s[i]=='[' || s[i]==']' || s[i]=='{' || s[i]=='}' ||
+           s[i]==';' || s[i]=='"' || s[i]==':' || s[i]==',' || s[i]=='<' || s[i]=='.' || s[i]=='>' ||
+           s[i]=='/' || s[i]=='?' || s[i]=='|'){
+            n++;
+           }
+    }
+    cout<<n;
+return 0;
+}
+
+
+/////////////////////////////////////54 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s, c="¿‡”ÛŒÓ€˚»Ë›˝ﬂˇﬁ˛®∏≈Â";
+    getline(cin, s);
+    int len = s.length(), n=0;
+
+    for (int i=0; i<19; i++){
+        for (int j=0; j<len; j++){
+            if (s[j] == c[i]){
+                n++;
+            }
+        }
+    }
+    cout<<n;
+return 0;
+}
+
+
+/////////////////////////////////////55 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n=0, x=0, z=0, max;
+
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            n++;
+        }
+    }
+    n++;
+    int arr[n];
+
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            arr[z]=x;
+            x=0;
+            z++;
+            continue;
+        }
+        x++;
+    }
+    arr[n-1]=x;
+    max=arr[0];
+    for(int i=0; i<n; i++){
+        if(max<arr[i]){
+            max=arr[i];
+        }
+    }
+
+    x=0;
+    int q=0, p=0;
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            p=i;
+        }
+        if(max==x){
+            for(int j=q; j<p; j++){
+                cout<<s[j];
+            }
+            return 0;
+        }
+
+        if(s[i]==' '){
+            q=i;
+            x=0;
+            continue;
+        }
+        x++;
+    }
+    int u = s.rfind(' ');
+    for(int i=u+1; i<len; i++){
+        cout<<s[i];
+    }
+return 0;
+}
+
+
+/////////////////////////////////////56 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n=0, x=0, z=0, min;
+
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            n++;
+        }
+    }
+    n++;
+    int arr[n];
+
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            arr[z]=x;
+            x=0;
+            z++;
+            continue;
+        }
+        x++;
+    }
+    arr[n-1]=x;
+    min=arr[0];
+    for(int i=0; i<n; i++){
+        if(min>arr[i]){
+            min=arr[i];
+        }
+    }
+
+    x=0;
+    int q=0, p=0;
+    for(int i=0; i<len; i++){
+        if(s[i]==' '){
+            p=i;
+        }
+        if(min==x && s[i]==' '){
+            for(int j=q; j<p; j++){
+                cout<<s[j];
+            }
+            return 15;
+        }
+
+        if(s[i]==' '){
+            q=i+1;
+            x=0;
+            continue;
+        }
+        x++;
+    }
+    int u = s.rfind(' ');
+    for(int i=u+1; i<len; i++){
+        cout<<s[i];
+    }
+return 0;
+}
+
+
+/////////////////////////////////////57 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length();
+
+    for(int i=0; i<len; i++){
+        if(s[i]==' ' && s[i+1]==' ')
+            continue;
+        cout<<s[i];
+    }
+return 0;
+}
+
+
+/////////////////////////////////////58 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n, x;
+////////////////////////////////////INPUT: C:/Users/Saken/Desktop/IITU/Programming Languages.txt
+
+///////////////////////////////////OUTPUT: Programming Languages
+    n = s.rfind('/');
+    x = s.rfind('.');
+    for(int i=0; i<len; i++){
+        if(s[i]=='/'){
+            for(int j=n+1; j<x; j++){
+                cout<<s[j];
+            }
+            return 1;
+        }
+    }
+return 0;
+}
+
+
+/////////////////////////////////////59 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n, x;
+////////////////////////////////////INPUT: C:/Users/Saken/Desktop/IITU/Programming Languages.txt
+
+///////////////////////////////////OUTPUT: txt
+    x = s.rfind('.');
+    for(int i=x+1; i<len; i++){
+        cout<<s[i];
+    }
+return 0;
+}
+
+
+/////////////////////////////////////60 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <windows.h>
+#include <stdio.h>
+#include <string>
+using namespace std;
+
+int main (){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), n, x, t;
+////////////////////////////////////INPUT: C:/Users/Saken/Desktop/IITU/Programming Languages.txt
+///////////////////////////////////OUTPUT: Users
+
+////////////////////////////////////INPUT: C:/
+///////////////////////////////////OUTPUT: /
+    x = s.find('/');
+    for(int i=x+1; i<len; i++){
+        if(s[i]=='/'){
+            t=i;
+            break;
+        }
+    }
+    if(x==len-1){
+        cout<<s[len-1];
+        return 0;
+    }
+
+    for(int i=x; i<t; i++){
+        if(s[i]=='/')
+            continue;
+        cout<<s[i];
+    }
+return 0;
+}
+
+/////////////////////////////////////61 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s;
+    getline(cin, s);
+    int len = s.length(), n=s.rfind('/');
+////////////////////////////////////INPUT: C:/Users/Saken/Desktop/IITU/Programming Languages
+///////////////////////////////////OUTPUT: Programming Languages
+
+////////////////////////////////////INPUT: C:/
+///////////////////////////////////OUTPUT: /
+    for ( int i=n+1; i<len; i++){
+        cout<<s[i];
+    }
+    if(n == len-1){
+        cout<<"/";
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////62 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1="‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ", s2;
+    getline(cin, s2);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length();
+    char c;
+
+    if((int)s2[0]+256 >=192 && (int)s2[0]+256<=223){
+        c = s2[lens2-1];
+        for(int i=lens2-1; i>0; i--){
+            if((int)s2[i-1]+256>223 || (int)s2[i-1]+256<192){
+                s2[i]=s2[i-2];
+                continue;
+            }
+            if((int)s2[i]+256>223 || (int)s2[i]+256<192){
+                continue;
+            }
+            s2[i]= s2[i-1];
+        }
+        s2[0]=c;
+        cout<<s2;
+        return 0;
+    }
+    
+    if((int)s2[0]+256 >=224 && (int)s2[0]+256<=255){
+        c = s2[lens2-1];
+        for(int i=lens2-1; i>0; i--){
+            if((int)s2[i-1]+256>255 || (int)s2[i-1]+256<192){
+                s2[i]=s2[i-2];
+                continue;
+            }
+            if((int)s2[i]+256>255 || (int)s2[i]+256<192){
+                continue;
+            }
+            s2[i]= s2[i-1];
+        }
+        s2[0]=c;
+        cout<<s2;
+        return 0;
+    }
+    
+return 0;
+}
+
+
+/////////////////////////////////////63 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1="‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ", s2;
+    getline(cin, s2);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length(), k, x=0;
+    cin>>k;
+
+    if(s2[0]>='¿' && s2[0]<='ﬂ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<len-1; j++){
+                if(s2[i]<'¿' && s2[i]>'ﬂ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s[j]){
+                    if(j+k >len-1){
+                        s2[i]=s[(j+k)%(len)];
+                        break;
+                    }
+                    s2[i]=s[j+k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+    if(s2[0]>='‡' && s2[0]<='ˇ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<lens1-1; j++){
+                if(s2[i]<'‡' && s2[i]>'ˇ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s1[j]){
+                    if(j+k >len-1){
+                        s2[i]=s1[(j+k)%(len)];
+                        break;
+                    }
+                    s2[i]=s1[j+k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+
+return 0;
+}
+
+
+/////////////////////////////////////64 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1="‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ", s2;
+    getline(cin, s2);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length(), k, x=0;
+    cin>>k;
+////////////////////////////////////////////////////////INPUT; ”¬Ã«œ
+///////////////////////////////////////////////////////OUTOUT: —¿ ≈Õ
+    if(s2[0]>='¿' && s2[0]<='ﬂ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<len-1; j++){
+                if(s2[i]<'¿' && s2[i]>'ﬂ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s[j]){
+                    if(j-k <0){
+                        s2[i]=s[len-(k-j)];
+                        break;
+                    }
+                    s2[i]=s[j-k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+    if(s2[0]>='‡' && s2[0]<='ˇ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<lens1-1; j++){
+                if(s2[i]<'‡' && s2[i]>'ˇ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s1[j]){
+                    if(j-k<0){
+                        s2[i]=s1[len-(k-j)];
+                        break;
+                    }
+                    s2[i]=s1[j-k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+
+return 0;
+}
+
+
+/////////////////////////////////////65 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1="‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ", s2;
+    getline(cin, s2);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length(), k=0, x=0, n=0;
+    char c;
+    cin>>c;
+////////////////////////////////////////////////////////INPUT;    ”¬Ã«œ
+                                                            //    —
+
+///////////////////////////////////////////////////////OUTOUT:    —¿ ≈Õ
+    if(s2[0]>='¿' && s2[0]<='ﬂ'){
+        for(int i=0; i<len; i++){
+            if(s2[0] == s[i]){
+                n=i;
+            }
+            if(c == s[i]){
+                x=i;
+            }
+        }
+    }
+    if(s2[0]>='‡' && s2[0]<='ˇ'){
+        for(int i=0; i<lens1; i++){
+            if(s2[0] == s1[i]){
+                n=i;
+            }
+            if(c == s1[i]){
+                x=i;
+            }
+        }
+    }
+
+    k=n-x;
+    k*=-1;
+
+
+
+    if(s2[0]>='¿' && s2[0]<='ﬂ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<len-1; j++){
+                if(s2[i]<'¿' && s2[i]>'ﬂ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s[j]){
+                    if(j+k >len-1){
+                        s2[i]=s[(j+k)%(len)];
+                        break;
+                    }
+                    s2[i]=s[j+k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+    if(s2[0]>='‡' && s2[0]<='ˇ'){
+        for(int i=0; i<lens2; i++){
+            for(int j=0; j<lens1-1; j++){
+                if(s2[i]<'‡' && s2[i]>'ˇ'){
+                    cout<<s2[i];
+                    break;
+                }
+                if(s2[i]==s1[j]){
+                    if(j+k >len-1){
+                        s2[i]=s1[(j+k)%(len)];
+                        break;
+                    }
+                    s2[i]=s1[j+k];
+                    break;
+                }
+            }
+        }
+        cout<<s2;
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////66 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s, s1="                      ", s2="                                  ";
+    getline(cin, s);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length(), x=0;
+
+    for(int i=1; i<len; i+=2){
+        s1[x] = s[i];
+        x++;
+    }
+    x=0;
+    for(int i=len-1; i>=0; i-=2){
+        s2[x] = s[i];
+        x++;
+    }
+    x=0;
+    cout<<s1<<s2;
+return 0;
+}
+
+
+/////////////////////////////////////67 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s;
+    getline(cin, s);
+    int len = s.length(), x=0, y=0, n=0;
+    x=len-1;
+    for(int i=0; i<len/2+1; i++){
+        if(x==len/2){
+            cout<<s[x];
+            break;
+        }
+        cout<<s[x]<<s[y];
+        x--;
+        y++;
+    }
+return 0;
+}
+
+
+/////////////////////////////////////68 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+#include <windows.h>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string s="¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ", s1="‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ", s2;
+    getline(cin, s2);
+    int len = s.length(), lens1=s1.length(), lens2=s2.length(), k=0, x=0, n;
+
+    if(s2[0]>='¿' && s2[0]<='ﬂ'){
+        for(int i=0; i<lens2; i++){
+            if(s2[i]!=s[i]){
+                cout<<s2[i];
+                return 0;
+            }
+        }
+    }
+    if(s2[0]>='‡' && s2[0]<='ˇ'){
+        for(int i=0; i<lens2; i++){
+            if(s2[i]!=s1[i]){
+                cout<<s2[i];
+                return 0;
+            }
+        }
+    }
+    cout<<0;
+
+return 0;
+}
+
+
+/////////////////////////////////////69 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s1="                      ", s2="                      ";
+    getline(cin, s);
+    int len = s.length(), n=0, x=0, y=0;
+
+    for(int i=0; i<len; i++){
+        if(s[i]=='('){
+            s1[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]==')'){
+            s2[n]=s[i];
+            n++;
+        }
+    }
+    for(int i=0; i<s1.length(); i++){
+        if(s1[i]=='('){
+            x++;
+           }
+    }
+    for(int i=0; i<s2.length(); i++){
+        if(s2[i]==')'){
+            y++;
+           }
+    }
+    if(x==y){
+        cout<<0;
+        return 0;
+    }
+    else{
+        cout<<-1;
+        return 0;
+    }
+
+return 0;
+}
+
+
+/////////////////////////////////////70 ESEP///////////////////////////////////////
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main(){
+    string s, s1="                      ", s2="                      ", x1="                      ", x2="                      ", z1="                      ", z2="                      ";
+    getline(cin, s);
+    int len = s.length(), n=0, x=0, y=0, xx=0, yy=0, xxx=0, yyy=0;
+
+    for(int i=0; i<len; i++){
+        if(s[i]=='('){
+            s1[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]==')'){
+            s2[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]=='['){
+            x1[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]==']'){
+            x2[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]=='{'){
+            z1[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+    for(int i=0; i<len; i++){
+        if(s[i]=='}'){
+            z2[n]=s[i];
+            n++;
+        }
+    }
+    n=0;
+
+
+
+    for(int i=0; i<s1.length(); i++){
+        if(s1[i]=='('){
+            x++;
+           }
+    }
+    for(int i=0; i<s2.length(); i++){
+        if(s2[i]==')'){
+            y++;
+           }
+    }
+
+    for(int i=0; i<x1.length(); i++){
+        if(x1[i]=='['){
+            xx++;
+           }
+    }
+    for(int i=0; i<x2.length(); i++){
+        if(x2[i]==']'){
+            yy++;
+           }
+    }
+
+    for(int i=0; i<z1.length(); i++){
+        if(z1[i]=='{'){
+            xxx++;
+           }
+    }
+    for(int i=0; i<z2.length(); i++){
+        if(z2[i]=='}'){
+            yyy++;
+           }
+    }
+
+    if(x==y){
+        if(xx==yy){
+            if(xxx==yyy){
+                cout<<0;
+                return 0;
+            }
+        }
+    }
+    else{
+        cout<<-1;
+        return 0;
+    }
+
+return 0;
+}
+
+
+///////ALL COPYRIGHTS RESERVED///////////
+///////MADE BY SAKEN/////////////
+

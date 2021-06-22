@@ -1,0 +1,52 @@
+#include "iostream"
+#include "chrono"
+using namespace std;
+using namespace std::chrono;
+
+template <typename T>
+
+T QuickSort(T arr, int left, int right) {
+    int pivot, i = left, j = right;
+
+    if (left >= right)
+        return arr;
+
+    pivot = (left + right) / 2;
+
+    while (i < j) {
+        while (i < pivot && arr[i] <= arr[pivot])
+            i++;
+        while (j > pivot && arr[j] >= arr[pivot])
+            j--;
+
+        if (i < j) {
+            swap(arr[j], arr[i]);
+            if (i == pivot)
+                pivot = j;
+            else if (j == pivot)
+                pivot = i;
+        }
+    }
+    QuickSort(arr, left, pivot);
+    QuickSort(arr, pivot + 1, right);
+}
+
+
+int main() {
+    auto start = high_resolution_clock::now();
+
+    double arr[] = {134, 3354, 7, 26, 371, 6, 3, 7, 4, 69, 5000, 3, 2, 375, 4, 7, 5, 3, 634, 65, 343};
+    int length = sizeof(arr)/sizeof(arr[0]);
+
+    QuickSort(arr, 0, length-1);
+
+    for (int i = 0; i < length; i++)
+        cout << arr[i] << " ";
+
+
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(stop - start);
+    cout<<endl<<duration.count();
+
+    return 0;
+}

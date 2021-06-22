@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+#include <Windows.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(866); 
+	SetConsoleOutputCP(866);
+	int n;
+	cin >> n;
+	if (n % 2 == 0)
+		cout << "Четное ";
+	else
+		cout << "Нечетное ";
+	if (n > 0 && n < 10)
+		cout << "однозначное число";
+	if (n > 9 && n < 100)
+		cout << "двузначное число";
+	if (n > 99 && n < 1000)
+		cout << "трехзначное число";
+
+	return 0;
+}

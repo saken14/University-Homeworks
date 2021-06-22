@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	double n, m;
+	cin >> n;
+	m = ceil(n / 100);
+	if (n / 100 == m) {
+		cout << ++m;
+		return 0;
+	}
+	cout << ceil(n / 100);
+
+	return 0;
+}

@@ -1,0 +1,1474 @@
+A esep......................................................................................................................
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main () {
+	double a, b;
+	double c;
+	cin >> a;
+	cin >> b;
+	c=sqrt(a*a+b*b);
+		
+		cout <<	c;
+
+
+	system ("pause");
+	return 0;
+}
+
+B esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main () {
+	int a, b,c;
+	
+	cin >> a;
+	b=a+1;
+	c=a-1;
+	char x = '.';
+		
+		cout <<	"The next number for the number "<< a << " is " << b <<x<<endl<< "The previous number for the number "<< a<< " is " << c<<x<<endl;
+
+
+	system ("pause");
+	return 0;
+}
+
+C esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main () {
+	int a, b, x;
+	cin >> a;
+	cin >> b;
+	x=b/a;
+	cout << x;
+
+
+	system ("pause");
+	return 0;
+}
+
+D esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a, b;
+	cin >> a >> b;
+	cout << b%a << endl;
+
+
+	system ("pause");
+	return 0;
+}
+
+
+E esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a, b, c;
+	cin >> a >>b;
+	c=(a*b)%109;
+
+
+	cout << (c+109)%109<<endl;
+
+	return 0;
+	system ("pause");
+}
+
+F esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+
+	cout << a%10 << endl;
+ 
+		
+
+	system ("pause");
+	return 0;
+}
+
+G esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+
+	cout << a/10 << endl;
+ 
+		
+
+	system ("pause");
+	return 0;
+}
+
+
+H esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+
+	cout << (a/10)%10 << endl;
+ 
+		
+
+	system ("pause");
+	return 0;
+}
+
+
+I esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+
+	cout << a/100 + (a/10)%10 + a%10 << endl;
+ 
+		
+
+	system ("pause");
+	return 0;
+}
+
+J esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+
+	cout << a-a%2+2 << endl;
+ 
+		
+
+	system ("pause");
+	return 0;
+}
+
+
+K esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a, b, c;
+	cin >> a;
+	b=(a/60)%24;
+	c=a%60;
+
+	cout << b << " " << c <<endl;
+
+	return 0;
+	system ("pause");
+}
+
+L esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a, b, c, d,e,f;
+	cin >> a;
+	b=a / 3600 % 24;
+	c=a%3600/60/10;
+	d=a%3600/60%10;
+	e=a%60/10;
+	f=a%60%10;
+	cout << b << ":" << c << d << ":" << e << f <<endl;
+
+	
+	return 0;
+	system ("pause");
+}
+
+M esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a, b;
+	int c=0;
+	cin >> a >>b;
+	c=a;
+	a=b;
+	b=c;
+	cout << a <<" " << b;
+
+
+	
+	return 0;
+	system ("pause");
+}
+
+N esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a,b, x;
+	cin >> a;
+	x=a*45+(a/2)*5+((a-1)/2)*15;
+	cout << x/60+9 << " "<< x%60;
+
+
+	
+	return 0;
+	system ("pause");
+}
+
+O esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a,b,c,d,e,f,g;
+	cin >> a >> b >> c;
+	d=a*c;
+	g=b*c;
+	e=b*c/100;
+	f=d+e;
+	cout <<f << " " << g%100;
+	
+
+	
+	return 0;
+	system ("pause");
+}
+
+P esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a,b,c,d,e,f,x,y,w;
+	cin >> a >> b >> c >>d>>e>>f;
+	x=a*3600+b*60+c;
+	y=d*3600+e*60+f;
+	w=y-x;
+	cout <<w;
+	
+
+	
+	return 0;
+	system ("pause");
+}
+
+Q esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int a,b,c;
+	cin >> a >> b;
+	c=(b/a+(b%a!=0));
+	cout << c;
+	
+
+	
+	return 0;
+	system ("pause");
+}
+
+R esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	int a,b,c;
+	cin >> a >> b;
+	c=(a-b%a)%a;
+
+	cout << c;
+	
+
+	
+	return 0;
+	system ("pause");
+}
+
+S esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int h, a, b, q, w, e, r, t, s;
+	cin >> h >> a>> b;
+	q = h - a;//6
+	w = a - b;//2
+
+	cout << 1 + q / w + (q % w + w - 1) / w;
+
+	system("pause");
+	return 0;
+
+}
+
+T esep......................................................................................................................
+
+
+
+U esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int n, m, q, w;
+	cin >> n>> m;
+	q = n % m;
+	w = m % n;
+
+	cout << q * w + 1;
+
+	system("pause");
+	return 0;
+
+}
+
+V esep......................................................................................................................
+
+
+IF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+
+
+A  esep......................................................................................................................
+
+#include <iostream>
+using namespace std;
+
+// Check Examples
+
+int main()
+{
+	int a, b;
+	cin >>a>>b;
+	if (a>b)
+    cout << a;
+    else 
+    cout <<b;
+    
+    return 0;
+}
+
+
+
+ B esep......................................................................................................................
+
+#include <iostream>
+using namespace std;
+
+// Check Examples
+
+int main()
+{
+	int a;
+	cin >> a;
+	if (a%4==0 && a%100 !=0 || a%400 == 0)
+	cout << "YES";
+	else  
+	cout << "NO";
+	
+    
+    return 0;
+}
+
+
+
+ C esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	 int a, b;
+  cin>>a>>b;
+  if ((a!=1 && b!=1) || (a==1 && b==1))
+    cout<<"YES";
+  else
+    cout<<"NO";
+	
+    
+    system ("pause");
+}
+
+
+ D esep......................................................................................................................
+
+#include <iostream>
+using namespace std;
+
+// Check Examples
+
+int main()
+{
+	int x;
+	cin >> x;
+	if (x>0)
+	cout << 1;
+	else if (x<0)
+	cout << -1;
+	else 
+	cout << 0;
+    
+    return 0;
+}
+
+ E esep......................................................................................................................
+
+#include <iostream>
+using namespace std;
+
+// Check Examples
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	if (a>b)
+	cout << 1;
+	else if (b>a)
+	cout << 2;
+	else 
+	cout << 0;
+    
+    return 0;
+}
+
+
+ F esep......................................................................................................................
+
+
+#include <iostream>
+//#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+	 int a, b, c;
+    cin >> a >> b >> c;
+    char tmp;
+    if (a > b) 
+        if (c > a) 
+            cout << c;
+         else 
+            cout << a;
+        
+     else if (c > b) 
+        cout << c;
+	 else 
+        cout << b;
+    
+    cin.get();
+}
+
+
+ G esep......................................................................................................................
+
+
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	 int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if (a==c)
+		cout << "YES";
+		else if (b==d)
+			cout << "YES";
+			else 
+			cout << "NO";
+	//else
+	//	cout << "NO";
+    
+    system ("pause");
+}
+
+H  esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+//#include <lomanip>
+using namespace std;
+
+int main() {
+	int a,b,c,d,maxa,maxb,mina,minb;
+	cin >> a>>b>>c>>d;
+	maxa=max(a,c);
+	maxb=max(b,d);	
+	mina=min(a,c);
+	minb=min(b,d);
+	if (maxa-mina==maxb-minb)
+		cout << "YES";
+	else 
+		cout << "NO";
+	return 0;
+	system ("pause");
+}
+
+
+ I esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+  int a, b,c,d,maxa,maxb,mina,minb;
+  cin>>a>>b>>c>>d;
+  maxa=max(a,c);
+  mina=min(a,c);
+  maxb=max(b,d);
+  minb=min(b,d);
+
+  if (a==c||b==d)
+		cout << "YES";
+		else if (maxa-mina==maxb-minb)
+			cout << "YES";
+		else 
+			cout << "NO";
+ // if (maxa-mina==maxb-maxa)
+	//	cout << "YES";
+	//	else 
+		//	cout << "NO";
+  
+
+	
+    
+    system ("pause");
+}
+
+
+ J esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b, a1, b1;
+	cin >> a >> b >> a1 >> b1;
+
+	if ((a1 == a) && (b1 == b - 1 || b1 == b + 1))
+		cout << "YES";
+	else if ((b1 == b) && (a1 == a + 1 || a1 == a - 1))
+		cout << "YES";
+	else if ((a1 == a - 1) &&( b1 == b + 1 || b1 == b - 1))
+		cout << "YES";
+	else if ((a1 == a + 1) && (b1 == b + 1 || b1 == b - 1))
+		cout << "YES";
+	else 
+		cout << "NO";
+
+	system("pause");
+	return 0;
+
+}
+
+
+ K esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b, a1, b1;
+	cin >> a >> b >> a1 >> b1;
+
+	if ((a1 == a - 1) && (b1 == b + 2 || b1 == b - 2))
+		cout << "YES";
+	else if ((a1 == a + 1) && (b1 == b + 2 || b1 == b - 2))
+		cout << "YES";
+	else if ((b1 == b + 1) && (a1 == a + 2 || a1 == a - 2))
+		cout << "YES";
+	else if ((b1 == b - 1) && (a1 == a + 2 || a1 == a - 2))
+		cout << "YES";
+	else
+		cout << "NO";
+
+
+	system("pause");
+	return 0;
+
+
+FOR//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+A  esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main (){
+	int a,b,c;
+	c=0;
+	cin >> a>>b;
+	c=a;
+	for (int a=c; a<=b; a++){
+		if (a%2==0)	
+			cout << a << " ";
+		/*else 
+			continue;
+		cout << a;*/
+	}
+			
+	system ("pause");
+	return 0;
+}
+
+
+B  esep......................................................................................................................
+
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main (){
+	int a,b,x,c,d;
+	x=0;
+	cin >> a>>b>>c>>d;
+	x=a;
+	for (int a=x; a<=b; a++){
+		if (a%d==c)	
+
+			cout << a << " ";
+	}
+			
+	system ("pause");
+	return 0;
+}
+
+
+C  esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b, x, q, w;
+	x = 0;
+	cin >> a >> b;
+
+	q = ceil(sqrt(a));
+	w = sqrt(b);
+
+	for (int a = q; q <= w; q++)
+		cout << q * q << endl;
+
+	system("pause");
+	return 0;
+
+}
+
+
+G esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b, c;
+	cin >> a;
+	for (int i = 2; i <= a; i++) {
+		if (a % i == 0) {
+			cout << i;
+			break;
+		}
+	}
+
+
+	system("pause");
+	return 0;
+
+}
+
+
+H esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b, c;
+	cin >> a;
+	for (int i = 1; i <= a; i++) {
+		if (a % i == 0) {
+			cout << i<<" ";
+		}
+	}
+
+
+	system("pause");
+	return 0;
+
+}
+
+I esep......................................................................................................................
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+
+using namespace std;
+
+int main()
+{
+    int n,b;
+b=0;
+    cin>>n;
+    for (int i=1; i<=n; i++){
+        if (n%i==0){
+           b++;
+        }
+
+    }
+    cout<<b;
+    return 0;
+}
+
+
+
+
+J esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a, b = 0;
+	for (int i = 0; i < 100; i++) {
+		cin >> a;
+		b += a;
+	}
+	cout << b;
+
+
+	system("pause");
+	return 0;
+
+}
+
+
+K esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a,c, b = 0;
+	cin >> c;
+	for (int i = 0; i < c; i++) {
+		cin >> a;
+		b += a;
+	}
+	cout << b;
+
+
+	system("pause");
+	return 0;
+
+}
+
+
+
+M esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+	int a,c, b = 0;
+	cin >> c;
+	for (int i = 0; i < c; i++) {
+		cin >> a;
+		if (a == 0)
+			b++;
+	}
+	cout << b;
+
+
+	system("pause");
+	return 0;
+
+}
+
+
+ARRAY [N]/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+A  esep......................................................................................................................
+
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	int arr[100];
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+		if (i % 2 == 0) {
+			cout << arr[i] << endl;
+		}
+	}
+}
+
+B  esep......................................................................................................................
+
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	int arr[100];
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+		if (arr[i] % 2 == 0) {
+			cout << arr[i] << endl;
+		}
+	}
+}
+
+
+C  esep......................................................................................................................
+
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	int arr[10000];
+	cin >> n;
+	a = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+		if (arr[i] > 0) {
+			a++;
+		}
+	}
+	cout << a;
+}
+
+ D esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	int arr[10000];
+	cin >> n;
+	a = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int j=1; j<n; j++){
+	
+
+		if (arr[j] > arr[j - 1]) {
+
+			a++;
+			
+		}
+	}
+	cout << a;
+	}
+	
+
+
+
+ E esep......................................................................................................................
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	cin >> n;
+	int arr[n];
+	a = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int i=1; i<n; i++){
+
+                if ((arr [i]<0 && arr[i-1]<0)||(arr [i]>0 && arr[i-1]>0)){
+                    cout << "YES";
+                    return 0;
+                }
+
+
+
+	}
+	  cout <<"NO";
+	return 0;
+}
+
+
+ F esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	bool x=false;
+	cin >> n;
+	int arr[n];
+	a = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int i=1; i<n-1; i++){
+if ((arr [i]>arr[i-1])&&(arr [i]>arr[i+1])){
+a++;
+x=true;
+}
+}
+if (x==true){
+	cout<<a;
+}
+else
+    cout <<"0";
+	return 0;
+}
+
+
+ G esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int a, b, c, n;
+	bool x=false;
+	cin >> n;
+	int arr[n];
+	a = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int i=n-1; i>=0; i--){
+        cout <<arr[i]<<" ";
+	}
+	return 0;
+}
+
+
+ H esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int n,temp;
+	temp=0;
+
+	cin >> n;
+	int arr[n];
+
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	if (n%2==0){
+        for (int i=1; i<n; i+=2){
+            temp=arr[i-1];
+            arr[i-1]=arr[i];
+            arr[i]=temp;
+            cout << arr[i-1]<< " "<<arr[i]<<" ";
+        }
+	}
+    else {
+            for (int i=1; i<n; i+=2){
+            temp=arr[i-1];
+            arr[i-1]=arr[i];
+            arr[i]=temp;
+            cout << arr[i-1]<< " "<<arr[i]<<" ";
+
+    }
+cout <<arr[n-1];
+	return 0;
+}
+}
+
+
+ I esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int n,temp;
+	temp=0;
+
+	cin >> n;
+	int arr[n];
+
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int i=n-2; i>=0; i--){
+        temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+	}
+	for (int i =0; i<n; i++){
+        cout <<arr[i]<<" ";
+	}
+	return 0;
+}
+
+ J esep......................................................................................................................
+
+
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+	int n,mx;
+	mx=0;
+	cin >> n;
+	int arr[n];
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+        mx=arr[0];
+	for (int i=1; i<n; i++){
+
+        if (mx<arr[i])
+            mx=arr[i];
+
+	}
+	cout <<mx;
+	return 0;
+}
+
+
+ARRAY [N] [M]////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+A  esep......................................................................................................................
+
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int n,b,x;
+    cin >>n;
+    int arr[n][n];
+
+        for (int i=0; i<n; i++){
+            for (int j=0; j<n; j++){
+                if (i+j<n-1)
+                    cout <<"0 ";
+                if (j+i==n-1)
+                    cout <<"1 ";
+                if (i+j>=n)
+                    cout << "2 ";
+
+            }
+            cout<<endl;
+        }
+
+    return 0;
+}
+
+
+B  esep......................................................................................................................
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,b,x;
+    x=0;
+    cin >>n;
+    int arr[n][n];
+    for (int i =0; i<n; i++)
+        for (int j=0; j<n; j++)
+        cin>>arr[i][j];
+
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++){
+            if (i==j){
+                continue;
+            }
+            if (arr[i][j]!=arr[j][i]){
+                cout<<"no";
+                return 0;
+            }
+
+            }
+            cout <<"yes";
+
+
+    return 0;
+}
+
+
+
+
+FUNCTIONS////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+A  esep......................................................................................................................
+
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int minimum(int q, int w)
+{
+    int t;
+    if (q > w)
+        t = w;
+
+    else
+    t = q;
+
+return t;
+}
+
+int main()
+{
+    int z,y,x,p;
+    cin >> x >> y >> z >> p;
+    cout << minimum(minimum(x,y),minimum(z,p));
+    return 0;
+}
+
+
+
+B  esep......................................................................................................................
+
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+int power(int q, int w){
+    int t;
+    t=1;
+    for (int i=0; i<w; i++){
+        t*=q;
+    }
+
+return t;
+}
+
+int main(){
+    int x,y;
+    cin >> x >> y;
+    cout << power(x,y);
+    return 0;
+}
+
+
+
+
+C  esep......................................................................................................................
+
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+bool xxor (bool x, bool y){
+    bool m;
+    if (x != y)
+        m = 1;
+    else
+        m = 0;
+    return m;
+}
+
+int main(){
+    bool a,b;
+    cin >> a >> b;
+    cout << xxor(a,b) << endl;
+    return 0;
+}
+
+
+
+ D esep......................................................................................................................
+
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+bool more(bool x, bool y, bool z){
+
+    int q;
+    if (x+y+z >= 2)
+        q = 1;
+    else
+        q = 0;
+return q;
+}
+
+int main(){
+     bool a,b,c;
+    cin >> a >> b >> c;
+    cout << more(a,b,c) << endl;
+    return 0;
+}
+
+
+
+ E esep......................................................................................................................
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+string aaa (int q){
+    int x;
+    string y;
+    for (x=2;x<=sqrt(q);x++){
+        if (q%x == 0){
+            y = "composite";
+            x = q;
+        }
+        else
+            y = "prime";
+    }
+if (q == 2)
+        y = "prime";
+if (q == 3)
+        y = "prime";
+return y;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << aaa(n) << endl;
+    return 0;
+}
+
+
+
+ F esep......................................................................................................................
+//I COULD NOT DO IT;
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+
+using namespace std;
+
+double power(double q, double w){
+    double t,n,m;
+    cin >>t>>n;
+    if(n>0){
+    m=1;
+    for (int i=0; i<n; i++){
+        m*=t;
+    }
+    if (n<0){
+         m=1/n;
+       for(int i=t; i>n; i--){
+        t*=m;
+    }
+    t*=-1;
+    }
+
+return t;
+}
+}
+
+int main(){
+    double x,y;
+    //cin >> x >> y;
+    cout << power(x,y);
+    return 0;
+}
+
+
+
+ 

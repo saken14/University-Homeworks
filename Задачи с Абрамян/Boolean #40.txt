@@ -1,0 +1,31 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	int x1, y1, x2, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	bool step = false;
+	if ((x1 + 1 == x2 && y1 + 2 == y2) || (x1 - 1 == x2 && y1 + 2 == y2)) {
+		step = true;
+		cout << step;
+		return step;
+	}
+	if ((x1 + 2 == x2 && y1 - 1 == y2) || (x1 + 2 == x2 && y1 + 1 == y2)) {
+		step = true;
+		cout << step;
+		return 0;
+	}
+	if ((x1 - 1 == x2 && y1 - 2 == y2) || (x1 + 1 == x2 && y1 - 2 == y2)) {
+		step = true;
+		cout << step;
+		return step;
+	}
+	if ((x1 - 2 == x2 && y1 + 1 == y2) || (x1 - 2 == x2 && y1 - 1 == y2)) {
+		step = true;
+		cout << step;
+		return step;
+	}
+	cout << step;
+	return 0;
+}

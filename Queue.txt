@@ -1,0 +1,184 @@
+#include <iostream>
+using namespace std;
+
+const int INITIAL_CAPACITY = 2;
+const int GROWTH_FACTOR = 2;
+
+template <class T>
+class DynamicArray {
+    T *array;
+    int CAPACITY = INITIAL_CAPACITY;
+    int size;
+
+public:
+    // constructor
+    DynamicArray() {
+        array = new T[CAPACITY];
+        size = 0;
+    }
+    //destructor
+    ~DynamicArray() {
+        delete[] array;
+    }
+
+    // adding to the end
+    void append(T element) {
+        if (size == CAPACITY) {
+            resize();
+        }
+        array[size] = element;
+        size++;
+
+    }
+
+    void deleteAt(int pos) {
+        if ((pos >= size) || (pos < 0)) {
+            cout << "Invalid index\n";
+            return;
+        }
+
+        if(pos == size-1) {
+            array[pos] = 0;
+        }
+        else {
+            for (int i = pos; i < size; i++) {
+                array[i] = array[i + 1];
+            }
+        }
+        size--;
+    }
+
+    void insertAt(int element, int pos) {
+        if ((pos > size) || (pos < 0)) {
+            cout << "Invalid index\n";
+            return;
+        }
+
+        if (size == CAPACITY) {
+            resize();
+        }
+
+        size++;
+
+        for (int i = size - 1; i >= pos; i--) {
+            if (i == pos) {
+                array[i] = element;
+            } else {
+                array[i] = array[i - 1];
+            }
+        }
+    }
+
+    // returns size of array
+    int length() {
+        return size;
+    }
+
+    // doubles capacity if it is full
+    void resize() {
+        CAPACITY *= GROWTH_FACTOR;
+        T *temp = new T[CAPACITY];
+        copy(temp);
+        delete[] array;
+        array = temp;
+
+    }
+
+    // copies original array into temp
+    void copy(T temp[]) {
+        for (int i = 0; i < size; i++) {
+            temp[i] = array[i];
+        }
+    }
+
+    // returns element in x position.
+    T get(int pos) {
+        return array[pos];
+    }
+
+    void pretty_printing() {
+        cout<<"Dynamic array: [ ";
+        for (int i = 0; i < size; i++) {
+            cout << array[i] << " ";
+        }
+        cout<<"]\nLength: "<<length()<<"\n\n";
+    }
+};
+
+template <class T>
+class Queue {
+    DynamicArray<T> dynamicArray;
+    int size;
+public:
+    Queue() {
+        size=0;
+    }
+
+    //Inserts an object at the top of the Queue.
+    void push(T elem) {
+        dynamicArray.append(elem);
+        size++;
+    }
+
+    //Removes and returns the object at the top of the Queue.
+    void pop() {
+        if(size <= 0) {
+            cout<<"Queue is empty!\n";
+            return;
+        }
+        dynamicArray.deleteAt(0);
+        size--;
+    }
+
+    void clear() {
+        for(int i=size-1; i>=0; i--) {
+            dynamicArray.deleteAt(i);
+        }
+        size=0;
+    }
+
+    //Determines whether an element is in the Queue.
+    bool contains(T elem) {
+        for(int i=0; i<size; i++) {
+            if(elem == dynamicArray.get(i))
+                return true;
+        }
+        return false;
+    }
+
+    void pretty_printing() {
+        cout<<"Queue: [ ";
+        for(int i=0; i<size; i++) {
+            cout<<dynamicArray.get(i)<<" ";
+        }
+        cout<<"]\nLength: "<<dynamicArray.length()<<"\n\n";
+    }
+};
+
+int main() {
+    /*DynamicArray<int> dynArr;
+    dynArr.append(1);
+    dynArr.append(2);
+    dynArr.append(3);
+    dynArr.append(4);
+    dynArr.append(4);
+
+    //dynArr.deleteAt(1);
+    dynArr.pretty_printing();*/
+
+    Queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4);
+    q.push(5);
+
+    //q.pop();
+    //q.clear();
+
+    q.pretty_printing();
+
+    //cout<<q.contains(5);
+
+    return 0;
+}

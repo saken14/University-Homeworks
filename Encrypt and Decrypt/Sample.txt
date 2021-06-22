@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="601.0" style="-fx-background-color: #ccc5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+      <TextArea fx:id="text1" layoutX="11.0" layoutY="14.0" prefHeight="149.0" prefWidth="578.0" promptText="Text" style="-fx-border-width: 1; -fx-border-color: #ccc; -fx-border-radius: 5;">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></TextArea>
+      <TextArea fx:id="text2" layoutX="11.0" layoutY="237.0" prefHeight="149.0" prefWidth="578.0" promptText="Text" style="-fx-border-width: 1; -fx-border-color: #ccc; -fx-border-radius: 5;">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></TextArea>
+      <Button layoutX="418.0" layoutY="180.0" mnemonicParsing="false" onAction="#decrypt_press" prefHeight="40.0" prefWidth="126.0" text="Decrypt">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="237.0" layoutY="180.0" mnemonicParsing="false" onAction="#encrypt_press" prefHeight="40.0" prefWidth="126.0" text="Encrypt">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="text_key" layoutX="11.0" layoutY="188.0" prefHeight="28.0" prefWidth="93.0" promptText="Key (1-26)">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </TextField>
+   </AnchorPane>
+</GridPane>

@@ -1,0 +1,287 @@
+#include "iostream"
+using namespace std;
+
+template <typename T>
+class DoubleList {
+    class Node {
+    public:
+        T value;
+        Node *next, *prev;
+
+        Node(T elem = T(), Node *prev= nullptr, Node *next = nullptr) {
+            this->value=elem;
+            this->prev=prev;
+            this->next=next;
+        }
+    };
+
+    int size;
+    Node *head;
+    Node *tail;
+
+public:
+    DoubleList() {
+        size=0;
+        head= nullptr;
+        tail= nullptr;
+    }
+
+    int length() {
+        return size;
+    }
+
+    void pushBack(T elem) {
+        if(head== nullptr)
+            head = new Node(elem);
+        else if(size==1) {
+            tail = new Node(elem, head);
+            head->next = tail;
+        }
+        else {
+            Node *temp = new Node(elem, tail, nullptr);
+            tail->next=temp;
+            tail = temp;
+        }
+        size++;
+    }
+
+    void pushFront(T elem) {
+        if(head== nullptr)
+            head = new Node(elem);
+        else if(size==1) {
+            Node *temp = new Node(elem, nullptr, head);
+            tail = head;
+            tail->prev=temp;
+            head = temp;
+        }
+        else {
+            Node *temp = new Node(elem, nullptr, head);
+            head->prev=temp;
+            head = temp;
+        }
+        size++;
+    }
+
+    void popBack() {
+        if(size <= 0)
+            throw out_of_range("DLL is empty!");
+        else {
+            if(size==1) {
+                Node *temp = tail;
+                tail = temp->prev;
+                head = temp->prev;
+                delete temp;
+                //tail->next= nullptr;
+                size--;
+            }
+            else {
+                Node *temp = tail;
+                tail = temp->prev;
+                delete temp;
+                tail->next = nullptr;
+                size--;
+            }
+        }
+    }
+
+    void popFront() {
+        if(size <= 0)
+            throw out_of_range("DLL is empty!");
+        else {
+            if(size==1) {
+                Node *temp = head;
+                head = temp->next;
+                delete temp;
+                size--;
+            }
+            else {
+                Node *temp = head;
+                head = temp->next;
+                delete temp;
+                head->prev = nullptr;
+                size--;
+            }
+        }
+    }
+
+    void clearAll() {
+        while(size!=0)
+            popBack();
+    }
+
+    void insertAt(int pos, T elem) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(pos <= size/2) {
+                if (head == nullptr) {
+                    head = new Node(elem);
+                }
+                else if (pos == 0) {
+                    Node *cur = new Node(elem, nullptr, head);
+                    head = cur;
+                }
+                else {
+                    Node *temp = head;
+                    Node *temp2;
+                    int c = 0;
+                    while (c < pos - 1) {
+                        temp = temp->next;
+                        c++;
+                    }
+                    temp2 = temp->next;
+                    Node *cur = new Node(elem, temp, temp2);
+                    temp->next = cur;
+                    temp2->prev = cur;
+                }
+            }
+            else {
+                if (head == nullptr) {
+                    head = new Node(elem);
+                }
+                else if (pos == size-1) {
+                    Node *cur = new Node(elem, tail, nullptr);
+                    tail->next=cur;
+                    tail = cur;
+                }
+                else {
+                    Node *temp = tail;
+                    Node *temp2;
+                    int c = size-1;
+                    while (c > pos) {
+                        temp = temp->prev;
+                        c--;
+                    }
+                    temp2 = temp->prev;
+                    Node *cur = new Node(elem, temp2, temp);
+                    temp->prev = cur;
+                    temp2->next = cur;
+                }
+            }
+            size++;
+        }
+    }
+
+    void deleteAt(int pos) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(pos <= size/2) {
+                if (pos == 0) {
+                    Node *cur = head->next;
+                    delete head;
+                    head = cur;
+                    head->prev= nullptr;
+                }
+                else {
+                    Node *temp = head;
+                    Node *temp2;
+                    int c = 0;
+                    while (c < pos - 1) {
+                        temp = temp->next;
+                        c++;
+                    }
+                    Node *cur;
+                    cur = temp->next;
+                    temp2 = cur->next;
+                    delete cur;
+                    temp->next = temp2;
+                    temp2->prev=temp;
+                }
+            }
+            else {
+                if (pos == size-1) {
+                    Node *temp = tail->prev;
+                    delete tail;
+                    tail = temp;
+                    tail->next = nullptr;
+                }
+                else {
+                    Node *temp = tail;
+                    Node *temp2;
+                    Node *cur;
+                    int c = size-1;
+                    while (c > pos+1) {
+                        temp = temp->prev;
+                        c--;
+                    }
+                    cur = temp->prev;
+                    temp2 = cur->prev;
+                    delete cur;
+                    temp->prev=temp2;
+                    temp2->next=temp;
+                }
+            }
+            size--;
+        }
+    }
+
+    void updateAt(int pos, T elem) {
+        if(pos < 0 || pos >= size)
+            throw out_of_range("Index of element is out of range!");
+        else {
+            if(pos <= size/2) {
+                if (pos == 0) {
+                    head->value = elem;
+                }
+                else {
+                    Node *temp = head;
+                    int c = 0;
+                    while (c < pos) {
+                        temp = temp->next;
+                        c++;
+                    }
+                    temp->value = elem;
+                }
+            }
+            else {
+                if(pos == size-1) {
+                    tail->value=elem;
+                }
+                else {
+                    Node *temp = tail;
+                    int c = size-1;
+                    while (c > pos) {
+                        temp = temp->prev;
+                        c--;
+                    }
+                    temp->value = elem;
+                }
+            }
+        }
+    }
+
+    void display() {
+        Node *cur = head;
+        cout<<"DLL: [ ";
+        while(cur!= nullptr) {
+            cout<<cur->value<<" ";
+            cur=cur->next;
+        }
+        cout<<"]\nLength: "<<size<<"\n\n";
+    }
+};
+
+int main() {
+    DoubleList<int> d;
+    d.pushFront(5);
+    d.pushFront(4);
+    d.pushFront(3);
+    d.pushFront(2);
+    d.pushFront(1);
+
+    //d.popBack();
+    //d.popFront();
+    //d.clearAll();
+    d.insertAt(2, 999);
+
+    //d.display();
+
+    /*d.deleteAt(5);
+    d.display();*/
+
+    d.updateAt(2, 666);
+    d.display();
+
+    return 0;
+}
